@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: cardio-ai-api
+    env: python
+    buildCommand: pip install --no-build-isolation --no-use-pep517 -r requirements.txt
+    startCommand: uvicorn app:app --host 0.0.0.0 --port 10000
